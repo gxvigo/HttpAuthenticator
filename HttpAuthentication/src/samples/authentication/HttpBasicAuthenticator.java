@@ -65,6 +65,7 @@ public class HttpBasicAuthenticator extends HttpServlet {
 			System.out.println("### In HttpBasicAuthenticator - Username: " + username);
 			System.out.println("### In HttpBasicAuthenticator - Password: " + password);
 			
+			// invoke service to validate user
 			authenticated = ValidateCredentials.doValidateCredentials(username, password);
 			if (authenticated == false) {
 				System.out.println("### In HttpBasicAuthenticator - Wrong name or password for user : " + username);

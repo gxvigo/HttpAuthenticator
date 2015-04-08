@@ -4,7 +4,28 @@
 <meta charset="US-ASCII">
 <title>Insert title here</title>
 </head>
-<body>A page
+<body>
+
+<h1>Simple http basic authenticator service</h1>
+
+<h2>Used from DataPower or API Management</h2>
+
+URL: 
+<a href="http://localhost:8080/HttpAuthentication/HttpBasicAuthenticator">"http://localhost:8080/HttpAuthentication/HttpBasicAuthenticator"</a>
+
+</br>
+<p>
+The service checks for the Authorization header.</p>
+<p>If the header is present it check for credentials.</p>
+
+<p>Any combination of user and password is authenticated (http 200)</p>
+<p>the only exception is:</p>
+<p> user: <b>john</b></p>
+<p> pwd: <b>wrong</b></p>
+<p>In this case the service returns Forbidden (http 403)</p>
+  
+  
+<h5> ** Working with Tomcat 7 ** </h5>
 
 </body>
 </html>
